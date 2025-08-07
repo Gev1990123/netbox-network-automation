@@ -51,3 +51,14 @@ def get_ip_address(netbox, ip_address):
     except Exception as e:
         logger.error(f"Error retrieving IP address '{ip_address}': {e}")
         return None
+
+def get_dns_name_by_ip(netbox, ip_address):
+    try:
+        ip_obj = netbox.ipam.ip_addresses.get(address=ip_address)
+        if ip_obj:
+            return ip_obj.dns_name or "DNS name not set"
+        else:
+            return "IP address not found in NetBox"
+    except Exception as e:
+        logger.error(f"Error occurred while fetching DNS name for {ip_address}: {e}")
+        return f"Error occurred: {e}"
