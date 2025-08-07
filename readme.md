@@ -5,14 +5,16 @@ This repo contains Python scripts to automate tasks in NetBox, such as creating 
 ---
 
 ## 📁 Project Structure (Recommended)
-netbox-network-automation/
-├── scripts/           # Python automation scripts
-├── netbox_utils/      # Shared helper functions and NetBox config
-├── data/              # Input CSV/YAML files
-├── output/            # Generated output files (e.g., reports, logs)
-├── .env               # Environment variables (do not commit to version control)
-├── requirements.txt   # Python dependencies
-└── README.md          # Project documentation
+| Folder / File     | Description                                   |
+|-------------------|-----------------------------------------------|
+| scripts/          | Python automation scripts                     |
+| netbox_utils/     | Shared helper functions and NetBox config     |
+| data/             | Input CSV/YAML files                          |
+| output/           | Generated output files (e.g., reports, logs)  |
+| .env              | Environment variables (do not commit)         |
+| requirements.txt  | Python dependencies                           |
+| README.md         | Project documentation                         |
+
 
 ## ⚙️ Setup
 ### 1. Clone the repository
