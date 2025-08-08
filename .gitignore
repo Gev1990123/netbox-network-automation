@@ -9,3 +9,7 @@ __pycache__/
 env/
 venv/
 .idea/
+/data/
+/output/
+notes.txt
+scratch.py

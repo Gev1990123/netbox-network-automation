@@ -62,3 +62,12 @@ def get_dns_name_by_ip(netbox, ip_address):
     except Exception as e:
         logger.error(f"Error occurred while fetching DNS name for {ip_address}: {e}")
         return f"Error occurred: {e}"
+    
+def get_ip_addresses_from_prefix(netbox, prefix):
+    try:
+        # Get all IP addresses within the prefix
+        ip_addresses = netbox.ipam.ip_addresses.filter(parent=prefix)
+        return list(ip_addresses)
+    except Exception as e:
+        logger.error(f"Error retrieving IP addresses for prefix '{prefix}': {e}")
+        return []
